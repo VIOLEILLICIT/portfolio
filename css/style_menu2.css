@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.bodywrap{
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+.imgslide{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+.imgslide img{
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    transition: all 0.1s linear;  
+}
+.imgslide img:hover{
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;  
+    transform: scale(1.05);
+}
