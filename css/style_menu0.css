@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 20px);
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    overflow: hidden;
+}
+.bg_video_content {
+    height: 120%;
+    width: 120%;
+    object-fit: cover;
+    filter: brightness(100%);
+    vertical-align: bottom;
+}
+
+.bg_video_title {
+    font-family: 'JUNESN';
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15%;
+    
+}
+.bg_video_text {
+    width: 100%;
+    font-family: "ZenKurenaido";
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 150%;
+    
+}
+
+
+.intro{
+    width: 100%;
+    padding-top: 80px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+
+.section1{
+    background-color: #fff;
+    height: 400px;
+}
+
+.section-title {
+    font-family: 'JUNESN';
+    color: #333333;
+    font-size: 48px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.bgmplayer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
