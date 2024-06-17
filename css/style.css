@@ -129,11 +129,13 @@ header.fixed {
 }
 .menu{
     float: right;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding: 4px;
+    border-radius: 100px;
+    background-color: #444;
 }
 .navi{
-    margin-top: 20px;
+    margin-left: 4px;
+    margin-right: 4px
 }
 .navi>li{
     float: left;
@@ -145,7 +147,7 @@ header.fixed {
     height: 40px;
     text-align: center;
     line-height: 40px;
-    font-size: 15px;
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
     font-family: "San Francisco";
@@ -157,11 +159,11 @@ header.fixed {
 }
 .menu a {
     color: #989899;
-    font-weight: 200;
+    font-weight: 400;
 }
 .menu .non_ui a{
     color: #ffffff;
-    font-weight: 200;
+    font-weight: 400;
 }
 .menu .active a{
     color: #ffffff;
