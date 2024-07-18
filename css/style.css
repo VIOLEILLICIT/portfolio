@@ -62,6 +62,20 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
 
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('./fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* 원하는 두께 범위 지정 */
+    font-style: normal; /* 이탤릭이나 기울임 설정 가능 */
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayItalic';
+    src: url('./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 *{
     margin: 0 auto;
     padding: 0;
@@ -89,7 +103,6 @@ body{
 }
 header{
     width: 100%;
-    height: 80px;
     position: fixed;
     top: 0;
     right: 0;
@@ -98,14 +111,14 @@ header{
     z-index: 10;
     transition: all 0.1s ease-in;
 }
-/* 여기서 fixed는 js에서 받아오는 값으로, 스크롤 값에 따라 tag를 탈부착한다. */
+/* fixed는 js에서 받아오는 값으로, 스크롤 값에 따라 tag를 탈부착한다. */
 header.fixed {
     background-color: #1c1c1e;
 }
 
 .wrap{
     width: 100%;
-    height: 80px;
+    height: 70px;
 }
 .logo{
     float: left;
@@ -116,7 +129,7 @@ header.fixed {
 .logo a{
     width: 200px;
     height: 42px;
-    margin-top: 19px;
+    margin-top: 14px;
     margin-left: 20px;
 }
 .logo a img{
@@ -125,50 +138,49 @@ header.fixed {
     transition: all 0.1s linear;  
 }
 .logo a img:hover{
-    transform: scale(0.99);
+    transform: scale(0.995);
 }
-.menu{
-    float: right;
-    padding: 4px;
+.menuwrapper{
+    position: absolute;
+    top: 10px;
+    right: 10px;
     border-radius: 100px;
-    background-color: #444;
+    background-color: #303030;
+    padding: 5px 3px 5px 3px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 0px 10px rgba(0,0,0,0.25);
 }
-.navi{
-    margin-left: 4px;
-    margin-right: 4px
-}
+
+
+
 .navi>li{
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    
 }
 .navi>li>a{
     /*a에는 left X */
-    height: 40px;
+    height: 36px;
     text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: "San Francisco";
+    line-height: 36px;
+    font-size: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-family: "Pretendard Variable";
+    font-weight: 500;
     font-display: block;
+    border-radius: 100px;
+    margin: 0px 2px 0px 2px;
 }
 .navi>li>a:hover{
-    background-color: #ffffff;
-    color: #000000;
+    color: #f0f0f0;
+    transition: all 0.3s linear;  
 }
-.menu a {
-    color: #989899;
+.navi a {
+    color: #b0b0b0;
     font-weight: 400;
 }
-.menu .non_ui a{
-    color: #ffffff;
-    font-weight: 400;
-}
-.menu .active a{
-    color: #ffffff;
-    font-weight: 400;
-    opacity: 1;
+.navi .active a{
+    background-color: #ffffff !important;
+    color: #111111 !important;
 }
 
 .title_box {
@@ -189,3 +201,4 @@ header.fixed {
     font-weight: 400;
     line-height: 150%;
 }
+
