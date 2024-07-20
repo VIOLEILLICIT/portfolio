@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 4px);
     width: 100%;
     z-index: -1;
     opacity: 1;
@@ -12,28 +12,28 @@
 }
 .bg_video_content {
     height: 120%;
-    width: 120%;
+    width: 125%;
     object-fit: cover;
     filter: brightness(100%);
     vertical-align: bottom;
 }
 
 .bg_video_title {
-    font-family: 'JUNESN';
-    font-size: 80px;
+    font-family: 'AndersonGrotesk';
+    font-weight: 400;
+    font-size: 72px;
     color: #ffffff;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 17%;
     
 }
 .bg_video_text {
     width: 100%;
-    font-family: "ZenKurenaido";
-    font-size: 32px;
+    font-size: 20px;
     color: #ffffff;
     text-align: center;
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 150%;
     
 }
