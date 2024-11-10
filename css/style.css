@@ -85,6 +85,13 @@
 
 @font-face {
     font-family: 'AndersonGrotesk';
+    src: url('./fonts/AndersonGrotesk/AndersonGrotesk-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AndersonGrotesk';
     src: url('./fonts/AndersonGrotesk/AndersonGrotesk-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
@@ -137,6 +144,15 @@ header{
 header.fixed {
     background-color: #1c1c1e;
 }
+header.fixed .menuwrapper{
+    background-color: #1c1c1e;
+    box-shadow: 0;
+}
+/* fixed head가 붙으면 무조건 로고를 밝게 */
+header.fixed .logo {
+    filter:brightness(100%); 
+}
+
 
 .wrap{
     width: 100%;
@@ -148,16 +164,18 @@ header.fixed {
     height: 42px;
     margin-top: 11px;
     margin-left: 20px;
-
+}
+.logo.black{
+    filter:brightness(0%); 
 }
 .logo a{
     width: 200px;
     height: 42px;
 }
-.logo a img{
+.logo a img {
     margin-top: 10px;
     margin-left: 10px;
-    transition: all 0.1s linear;  
+    transition: all 0.1s linear; 
 }
 .logo a img:hover{
     transform: scale(0.995);
@@ -193,8 +211,8 @@ header.fixed {
     margin: 0px 2px 0px 2px;
 }
 .navi>li>a:hover{
-    color: #f0f0f0;
-    transition: all 0.3s linear;  
+    opacity: 75%;
+    transition: all 0.0s linear;  
 }
 .navi a {
     color: #e0e0e0;
