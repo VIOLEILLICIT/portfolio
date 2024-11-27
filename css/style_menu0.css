@@ -4,12 +4,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100vh - 4px);
+    height: calc(100vh - 0px);
     width: 100%;
     z-index: -1;
     opacity: 1;
     overflow: hidden;
-    background-color: #dbd4b5;
+    background-color: #111;
 }
 .bg_video_content {
     height: 120%;
@@ -20,41 +20,47 @@
 }
 
 .bg_video_title {
-    font-family: 'AndersonGrotesk';
-    font-weight: 700;
-    font-size: 70px;
-    color: #383838;
+    font-family: "Pretendard Variable";
+    font-weight: 600;
+    font-size: 64px;
+    color: #fff;
     text-align: center;
-    margin-top: 15%;
-    
+    margin-top: calc(20% * 0.8);
 }
+
 .bg_video_text {
-    font-family: 'AndersonGrotesk';
-    font-weight: 300;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
     width: 100%;
-    font-size: 18px;
-    color: #383838;
+    font-size: 22px;
+    color: #fff;
     text-align: center;
-    margin-top: 10px;
-    font-weight: 200;
+    margin-top: 24px;
     line-height: 150%;
 }
 .bg_video_button {
-
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top: 220px;
-
+    margin-top: 180px;
     padding: 16px 16px;
     font-weight: 500;
-    width: 160px;
-    border: 1px solid #383838;
+    font-size: 20px;
+    width: 220px;
     text-align: center;
-    color: #383838;
+    color: #fff;
+    opacity: 0.75;
+    
+    border: 1px solid #fff;
+    border-radius: 100px;
+    transition: .2s ease-in-out;
 }
 .bg_video_button:hover {
-    opacity: 50%;
+    background-color: #fff;
+    color: #111;
+    transform: scale(1.02);
+    opacity: 1;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.10), 0 0px 10px rgba(0,0,0,0.10);
 }
 
 .intro{
@@ -66,15 +72,40 @@
 
 .section1{
     background-color: #fff;
-    height: 400px;
+    height: 800px;
+    margin: 0 24px 0 24px;
 }
 
 .section-title {
-    font-family: 'JUNESN';
-    color: #333333;
-    font-size: 48px;
-    margin-top: 40px;
+    font-family: "Pretendard Variable";
+    font-weight: 600;
+    color: #111111;
+    font-size: 38px;
+    margin-top: 72px;
+    margin-bottom: 24px;
     text-align: center;
+}
+
+
+.profile_box{
+    background-color: #fff;
+    border-radius: 12px;
+    height: 400px;
+    transition: .2s ease-in-out;
+}
+
+.profile_box:hover{
+    transform: scale(1.005);
+    box-shadow: 0 8px 36px rgba(0,0,0,0.20);
+}
+
+.profile_img{
+    background-color: #808080;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 64px;
+    margin-top: 64px;
 }
 
 .bgmplayer{
