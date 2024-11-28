@@ -5,23 +5,72 @@
     width: 100%;
     height: calc(100vh - 80px);
 }
-.imgslide{
+
+.tenor-gif-embed{
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+    width: 72px;
+    height: 72px;;
+}
+.title_box {
+    margin-top: 8px;
+  }
+
+
+/* https://studiomeal.com/archives/533 */
+.container {
+    display: flex;
+    justify-content: center;
     padding-top: 80px;
-    width: 100%;
-    height: 800px;
+    padding-bottom: 80px;
     overflow: hidden;
+    display: grid;
+    /* columns(열)의 배치 */
+    /* fr(fraction)은 비율 */
+    /* repeat(2, 1fr) = 1fr 1fr */
+    /* minmax(100px, auto)는 최소한 100px, auto로 증가
+       아무리 내용의 양이 적더라도 최소한 100px은 확보하고,
+       내용이 많아 100px이 넘어가면 알아서 늘어나도록 처리 */
+    grid-template-columns: repeat(3, 420px);
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-auto-flow: row dense;
 }
-.imgslide img{
-    max-width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover;
-    transition: all 0.1s linear;  
+
+.containerBox{
+    width: 420px;
+    height: 260px;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    transition: all 0.1s linear; 
+    border: 1px solid #fff;
 }
-.imgslide img:hover{
-    max-width: 100%;
-    height: 200px;
+.containerBox:hover{
     display: block;
     object-fit: cover;  
-    transform: scale(1.05);
+    transform: scale(1.005);
+    border: 1px solid #505050;
+}
+.container img{
+    width: 412px;
+    height: 180px;
+    margin-top: 4px;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.container h3{
+    width: 380px;
+    font-size: 18px;
+    color: #222;
+    margin-left: 12px;
+    margin-top: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
