@@ -117,13 +117,15 @@
 }
 a{
     text-decoration: none;
-    display: block;
+    
 }
 html{
     width: 100%;
 }
 body{
     width: 100%;
+}
+body {
     background-color: #1c1c1e;
 }
 .body_transparent{
@@ -241,23 +243,4 @@ header.fixed .logo {
     color: #111111 !important;
 }
 */
-
-.title_box {
-    margin-top: 40px;
-  }
-.title_box_title {
-    font-family: 'JUNESN';
-    font-size: 56px;
-    color: #ffffff;
-    text-align: center;
-}
-.title_box_text {
-    width: 100%;
-    font-size: 18px;
-    color: #989899;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 400;
-    line-height: 150%;
-}
 
