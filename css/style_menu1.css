@@ -5,6 +5,10 @@
     height: calc(100vh - 80px);
 }
 
+.title_box {
+  margin-top: 56px;
+}
+
 .wrapper {
   margin-top : 80px;
   --checkbox-count: 3;
@@ -163,6 +167,7 @@
 @media (min-width: 640px) {
   .container {
     display: grid;
+    /* columns(열)의 배치*/
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     grid-auto-flow: row dense;
