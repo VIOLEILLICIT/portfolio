@@ -21,14 +21,14 @@
         </div>
     </header>
 
-    <div class="bg_video">
-        <video class="bg_video_content" autoplay muted loop>
+    <div class="bg_video"> <!-- 백그라운드 재생 비디오 -->
+        <video class="bg_video_content" autoplay muted loop playsinline> <!-- playsinline은 iOS를 포함한 모바일 환경에서 영상이 자동재생되도록 도와주는 태그이다. -->
           <source src="./images/855507-hd_1920_1080_25fps.mp4" type="video/mp4" />
-          Your browser is not supported!
+          Your browser is not supported <!-- 영상이 보이지 않을 때는 경고문을 출력하도록 한다. -->
         </video>
     </div>
 
-    <div class="intro">
+    <div class="intro"> <!-- 배경 위에 올라가는 요소. 타이틀 / 버튼 -->
         <h2 class="bg_video_title">Jinuk Lee</h2>
         <a class="bg_video_button btn_round_01" href="https://jinuklee.notion.site/a84db1bb0e9c4722a52c57f6533442ae" title="notion" target="_blank">Get Notion® portfolio</a>
         <div class="buttonswrapper">
