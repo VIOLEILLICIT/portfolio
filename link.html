@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- initial scale을 해줘야 각종 해상도에 대응할 수 있다. -->
     <title>Jinuk Lee®</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/source.css" rel="stylesheet" type="text/css">
@@ -12,12 +12,12 @@
     <script src="javascript/script.js"></script>
 </head>
 <body class="body_transparent">
+
     <header>
         <div class="wrap">
             <div class="logo">
                 <a href="#" onclick="location.href='index.html'"><img src="images/VIOLEILLICIT_logo.png" alt="Logo"></a>
             </div>
-            
         </div>
     </header>
 
@@ -30,7 +30,7 @@
 
     <div class="intro"> <!-- 배경 위에 올라가는 요소. 타이틀 / 버튼 -->
         <h2 class="bg_video_title">Jinuk Lee</h2>
-        <a class="bg_video_button btn_round_01" href="https://jinuklee.notion.site/a84db1bb0e9c4722a52c57f6533442ae" title="notion" target="_blank">Get Notion® portfolio</a>
+
         <div class="buttonswrapper">
                 <ul class="buttonlist">
                     <li class="menu"><a href="https://violeillicit.github.io/portfolio" title="포트폴리오" target="_self">Website</a></li>
@@ -38,7 +38,55 @@
                     <li class="menu"><a href="https://www.instagram.com/studio_violeillicit" title="인스타그램" target="_blank">Instagram</a></li>
                 </ul>
         </div>
-            </div>
+
+        <a class="bg_video_button btn_round_01" href="https://jinuklee.notion.site/a84db1bb0e9c4722a52c57f6533442ae" title="notion" target="_blank">Get Notion® portfolio</a>
+
+        <audio id="bgm" src="./src/wave to earth - bad.mp3"></audio>
+        <button id="toggle" class="bg_video_button btn_round_02" aria-pressed="false" aria-label="play"> <!-- aria-pressed:버튼 눌림 유무 aria-label:스크린리더(텍스트 읽는 사운드)-->
+            ▶ Allow background music
+        </button>
+
+        <script>
+            const audio = document.getElementById('bgm');
+            const btn = document.getElementById('toggle');
+
+            // 버튼 UI 업데이트
+            function setPlayingUI(playing){
+                btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+                btn.setAttribute('aria-label', playing ? 'pause' : 'play');
+                btn.textContent = playing ? '⏸ Pause' : '▶ Allow background music';
+            }
+
+            // 곡이 끝나면 버튼 상태를 재생으로 복구한다.
+            audio.addEventListener('ended', () => setPlayingUI(false));
+
+            // 일시정지/재생 토글
+            btn.addEventListener('click', async () => {
+                try {
+                    if (audio.paused) {
+                        const p = audio.play();
+                        if (p && typeof p.catch === 'function') await p;
+                        setPlayingUI(true);
+                    }
+                    else {
+                        audio.pause();
+                        setPlayingUI(false);
+                    }
+                } catch (err) {
+                    console.error('재생 실패', err);
+                    setPlayingUI(false);
+                }
+            });
+
+            // 로딩 중/준비 완료에 따라 초기 상태 정리(선택)
+            audio.addEventListener('loadedmetadata', () => setPlayingUI(false))
+            // 페이지가 비활성화된 사이 자동 일시정지 시 UI 동기화 (안전장치)
+            audio.addEventListener('pause', () => setPlayingUI(false));
+            audio.addEventListener('play', () => setPlayingUI(true));
+
+        </script>
+
+    </div>
 
     
 
