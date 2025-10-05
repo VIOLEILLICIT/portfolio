@@ -20,6 +20,12 @@
     font-weight: normal;
 } 
 
+@font-face { 
+    font-family: "Sonder Regular";
+    src: url("./fonts/SonderRegular.otf") format("Opentype");
+    font-weight: normal;
+} 
+
 /** Ultra Light */
 @font-face {
     font-family: "San Francisco";
@@ -164,7 +170,7 @@ header.fixed .logo {
 .logo{
     position: absolute;
     float: left;
-    width: 200px;
+    width: clamp(120px, 20vw, 180px);
     height: 42px;
     margin-top: 8px;
     margin-left: 12px;
@@ -173,10 +179,11 @@ header.fixed .logo {
     filter:brightness(0%); 
 }
 .logo a{
-    width: 200px;
+    width: clamp(120px, 20vw, 180px);
     height: 42px;
 }
 .logo a img {
+    width: clamp(120px, 20vw, 180px);
     margin-top: 10px;
     margin-left: 10px;
     transition: all 0.1s linear; 
