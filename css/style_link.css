@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+.bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 0px);
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    overflow: hidden;
+    background-color: #111;
+}
+.bg_video_content {
+    height: 120%;
+    width: 125%;
+    object-fit: cover;
+    filter: brightness(99%);
+    vertical-align: bottom;
+}
+
+.buttonswrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 4px 2px 4px 2px;
+}
+.buttonlist>li{
+    margin-top: 8px;
+    float: left;
+}
+.buttonlist>li>a{
+    /*a에는 left X */
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 17px;
+    padding: 5px 17px 5px 17px;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    font-display: block;
+    border-radius: 100px;
+    margin: 0px 2px 0px 2px;
+}
+.buttonlist>li>a:hover{
+    opacity: 100%;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;  
+}
+.buttonlist a {
+    color: #fff;
+    opacity: 0.75;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bg_video_title {
+    font-family: "Sonder Regular";
+    font-weight: 500;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    margin-top: max(200px, calc(20% * 0.8)); ;
+    width: 80%;
+    text-shadow: 0px 0px 32px rgba(0, 0, 0, 0.2);
+}
+.bg_video_button {
+    bottom: 80px;
+}
+.intro{
+    width: 100%;
+    padding-top: 80px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+.section1{
+    background-color: #fff;
+    height: 800px;
+    margin: 0 24px 0 24px;
+}
+.section-title {
+    font-family: "Pretendard Variable";
+    font-weight: 600;
+    color: #111111;
+    font-size: 38px;
+    margin-top: 72px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+.profile_box{
+    background-color: #fff;
+    border-radius: 12px;
+    height: 400px;
+    transition: .2s ease-in-out;
+}
+
+.profile_box:hover{
+    transform: scale(1.005);
+    box-shadow: 0 8px 36px rgba(0,0,0,0.20);
+}
+
+.profile_img{
+    background-color: #808080;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 64px;
+    margin-top: 64px;
+}
+
+.bgmplayer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
