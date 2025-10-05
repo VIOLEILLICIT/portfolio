@@ -36,7 +36,7 @@
     text-align: center;
     line-height: 36px;
     font-size: 17px;
-    padding: 5px 17px 5px 17px;
+    padding: 5px 17px 6px 17px;
     font-family: "Pretendard Variable";
     font-weight: 400;
     font-display: block;
@@ -68,6 +68,11 @@
 .bg_video_button {
     bottom: 80px;
 }
+
+.bgm_toggle_button {
+    bottom: 10px;
+}
+
 .intro{
     width: 100%;
     padding-top: 80px;
