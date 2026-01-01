@@ -29,3 +29,55 @@
     font-weight: 400;
     line-height: 150%;
 }
+
+/* 마우스 커서 변경 */
+body, a, button {
+    cursor: none !important;
+}
+
+@keyframes cursor-anim {
+    0% { background-position: 0 0; } /* 첫 번째 그림 */
+    100% { background-position: -128px 0; } /* 마지막 그림 직후 위치 */
+}
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none; /* 커서가 클릭을 방해하지 않게 함 */
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+
+    /* 스프라이트 이미지 적용 */
+    width: 32px;  /* 딱 한 프레임의 크기 */
+    height: 32px; /* 딱 한 프레임의 크기 */
+    background-image: url('../images/cursor-export.png');
+    
+    /* 애니메이션 적용 */
+    /* steps(4): 4프레임이니까 4단계로 딱딱 끊어서 보여줘! */
+    /* 위에서 길이를 128로 지정했으니까 한 프레임은*/
+    animation: cursor-anim 0.75s steps(4) infinite;
+}
+
+#cursor-effect {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+    pointer-events: none; /* 클릭 방해 금지 */
+    /* 애니메이션 생성 후 삭제 */
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10001; /* 대문(overlay)보다 위에 */
+}
+
+.click-animate {
+    animation: click-puff 0.5s ease-out;
+}
+
+@keyframes click-puff {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
